@@ -1,13 +1,30 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Saai Wedding Film's</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Trendy Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
 <style>
 body{margin:0;font-family:Arial;background:#0b0b0b;color:#fff;}
-header{text-align:center;padding:90px 20px;background:radial-gradient(circle,#1c1c1c,#000);}
-header h1{font-size:46px;}
+
+/* ===== HEADER WITH IMAGE (Option 1) ===== */
+header{
+  position:relative;
+  text-align:center;
+  padding:100px 20px;
+  background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+    url("images/camera1.jpg") center/cover no-repeat;
+}
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:52px;
+  letter-spacing:2px;
+}
 header p{color:#d4af37;font-size:20px;}
 
 nav{position:sticky;top:0;background:#111;padding:15px;text-align:center;z-index:9;}
@@ -74,7 +91,6 @@ footer{text-align:center;padding:30px;background:#000;color:#777;}
 <!-- ================= WEDDING ================= -->
 <div id="wedding">
 <h2>Wedding</h2>
-
 <div class="grid gallery">
 <img src="images/wedding1.jpg">
 <img src="images/wedding2.jpg">
@@ -82,32 +98,15 @@ footer{text-align:center;padding:30px;background:#000;color:#777;}
 
 <h3>Wedding Packages</h3>
 <div class="grid">
-<div class="package">
-<h4>Bronze</h4>
-<div class="price" id="w-bronze"></div>
-</div>
-
-<div class="package">
-<h4>Silver</h4>
-<div class="price" id="w-silver"></div>
-</div>
-
-<div class="package">
-<h4>Gold</h4>
-<div class="price" id="w-gold"></div>
-</div>
-
-<div class="package">
-<h4>Platinum</h4>
-<div class="price" id="w-platinum"></div>
-</div>
+<div class="package"><h4>Bronze</h4><div class="price" id="w-bronze"></div></div>
+<div class="package"><h4>Silver</h4><div class="price" id="w-silver"></div></div>
+<div class="package"><h4>Gold</h4><div class="price" id="w-gold"></div></div>
 </div>
 </div>
 
 <!-- ================= PRE-WEDDING ================= -->
 <div id="prewedding" style="display:none;">
 <h2>Pre-Wedding</h2>
-
 <div class="grid gallery">
 <img src="images/prewedding1.jpg">
 <img src="images/prewedding2.jpg">
@@ -115,74 +114,61 @@ footer{text-align:center;padding:30px;background:#000;color:#777;}
 
 <h3>Pre-Wedding Packages</h3>
 <div class="grid">
-<div class="package">
-<h4>Basic</h4>
-<div class="price" id="pw-basic"></div>
-</div>
-
-<div class="package">
-<h4>Premium</h4>
-<div class="price" id="pw-premium"></div>
-</div>
+<div class="package"><h4>Bronze</h4><div class="price" id="pw-bronze"></div></div>
+<div class="package"><h4>Silver</h4><div class="price" id="pw-silver"></div></div>
+<div class="package"><h4>Gold</h4><div class="price" id="pw-gold"></div></div>
 </div>
 </div>
 
 <!-- ================= ENGAGEMENT ================= -->
 <div id="engagement" style="display:none;">
 <h2>Engagement</h2>
-
 <div class="grid gallery">
-<img src="images/engagement.jpg">
+<img src="images/engagement1.jpg">
 <img src="images/engagement2.jpg">
 </div>
 
 <h3>Engagement Packages</h3>
 <div class="grid">
-<div class="package">
-<h4>Basic</h4>
-<div class="price" id="e-basic"></div>
-</div>
-
-<div class="package">
-<h4>Premium</h4>
-<div class="price" id="e-premium"></div>
-</div>
+<div class="package"><h4>Bronze</h4><div class="price" id="e-bronze"></div></div>
+<div class="package"><h4>Silver</h4><div class="price" id="e-silver"></div></div>
+<div class="package"><h4>Gold</h4><div class="price" id="e-gold"></div></div>
 </div>
 </div>
 
 </section>
 
-<footer>© 2026 Saai Wedding Film's | Solapur • Pune • Mumbai</footer>
+<footer>© 2026 Saai Wedding Film's</footer>
 
 <script>
 /* ===== OPTION 3 : ALL PRICES IN ONE PLACE ===== */
-const PRICES = {
-  wedding:{bronze:23000,silver:31000,gold:43000,platinum:66000},
-  prewedding:{basic:18000,premium:30000},
-  engagement:{basic:18000,premium:43000}
+const PRICES={
+  wedding:{bronze:23000,silver:31000,gold:43000},
+  prewedding:{bronze:15000,silver:22000,gold:30000},
+  engagement:{bronze:18000,silver:28000,gold:43000}
 };
 
-/* show prices */
-w_bronze.innerText="₹"+PRICES.wedding.bronze;
-w_silver.innerText="₹"+PRICES.wedding.silver;
-w_gold.innerText="₹"+PRICES.wedding.gold;
-w_platinum.innerText="₹"+PRICES.wedding.platinum;
+/* assign prices */
+w-bronze.innerText="₹"+PRICES.wedding.bronze;
+w-silver.innerText="₹"+PRICES.wedding.silver;
+w-gold.innerText="₹"+PRICES.wedding.gold;
 
-pw_basic.innerText="₹"+PRICES.prewedding.basic;
-pw_premium.innerText="₹"+PRICES.prewedding.premium;
+pw-bronze.innerText="₹"+PRICES.prewedding.bronze;
+pw-silver.innerText="₹"+PRICES.prewedding.silver;
+pw-gold.innerText="₹"+PRICES.prewedding.gold;
 
-e_basic.innerText="₹"+PRICES.engagement.basic;
-e_premium.innerText="₹"+PRICES.engagement.premium;
+e-bronze.innerText="₹"+PRICES.engagement.bronze;
+e-silver.innerText="₹"+PRICES.engagement.silver;
+e-gold.innerText="₹"+PRICES.engagement.gold;
 
 /* ===== OPTION 2 : EVENT TOGGLE ===== */
 function showEvent(id,btn){
-  ["wedding","prewedding","engagement"].forEach(s=>{
-    document.getElementById(s).style.display="none";
-  });
-  document.getElementById(id).style.display="block";
-  document.querySelectorAll('.toggle button')
-    .forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
+["wedding","prewedding","engagement"].forEach(s=>{
+document.getElementById(s).style.display="none";
+});
+document.getElementById(id).style.display="block";
+document.querySelectorAll('.toggle button').forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
 }
 </script>
 
