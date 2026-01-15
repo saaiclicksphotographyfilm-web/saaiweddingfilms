@@ -124,7 +124,7 @@ footer{text-align:center;padding:30px;background:#000;color:#777;}
 <div id="engagement" style="display:none;">
 <h2>Engagement</h2>
 <div class="grid gallery">
-<img src="images/engagement1.jpg">
+<img src="images/engagement.jpg">
 <img src="images/engagement2.jpg">
 </div>
 
