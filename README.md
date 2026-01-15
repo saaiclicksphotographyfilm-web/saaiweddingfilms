@@ -112,7 +112,7 @@ with a creative storytelling approach.
 <!-- ENGAGEMENT -->
 <h2>Engagement</h2>
 <div class="grid gallery">
-<img src="images/engagement1.jpg">
+<img src="images/engagement.jpg">
 <img src="images/engagement2.jpg">
 </div>
 
