@@ -156,7 +156,7 @@ Engagement and Baby Shower photography with a storytelling approach.
 <!-- ENGAGEMENT -->
 <h2>Engagement</h2>
 <div class="grid gallery">
-<img src="images/engagement1.jpg">
+<img src="images/engagement.jpg">
 <img src="images/engagement2.jpg">
 </div>
 <h3>Engagement Packages</h3>
