@@ -64,6 +64,20 @@ h3{text-align:center;margin:40px 0 20px;}
 }
 .package h4{color:#d4af37;margin:10px 0;}
 .price{color:#d4af37;font-size:20px;font-weight:bold;}
+  <!-- ================= ABOUT US ================= -->
+<section id="about">
+  <h2>About Saai Wedding Film's</h2>
+  <p style="max-width:900px;margin:0 auto;text-align:center;line-height:1.8;color:#ddd;font-size:18px;">
+    Saai Wedding Film's is a premium cinematic wedding photography and film brand,
+    dedicated to capturing real emotions, timeless moments, and beautiful stories.
+    With years of experience in Wedding, Pre-Wedding, and Engagement shoots,
+    we blend creativity with advanced equipment to deliver unforgettable memories.
+    <br><br>
+    Based in <span style="color:#d4af37;">Solapur</span>, serving
+    <span style="color:#d4af37;">Pune, Mumbai & Pan India</span>.
+  </p>
+</section>
+
 
 footer{text-align:center;padding:30px;background:#000;color:#777;}
 </style>
