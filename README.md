@@ -127,6 +127,7 @@ Engagement and Baby Shower photography with a storytelling approach.
 
 <section id="services">
 
+<!-- WEDDING -->
 <h2>Wedding Photography</h2>
 <div class="grid gallery">
 <img src="images/wedding1.jpg">
@@ -139,6 +140,7 @@ Engagement and Baby Shower photography with a storytelling approach.
 <div class="package"><h4>Platinum</h4><div class="price">₹65,000</div></div>
 </div>
 
+<!-- PRE-WEDDING -->
 <h2>Pre-Wedding Shoot</h2>
 <div class="grid gallery">
 <img src="images/prewedding1.jpg">
@@ -151,6 +153,7 @@ Engagement and Baby Shower photography with a storytelling approach.
 <div class="package"><h4>Platinum</h4><div class="price">₹45,000</div></div>
 </div>
 
+<!-- ENGAGEMENT -->
 <h2>Engagement</h2>
 <div class="grid gallery">
 <img src="images/engagement1.jpg">
@@ -163,6 +166,7 @@ Engagement and Baby Shower photography with a storytelling approach.
 <div class="package"><h4>Platinum</h4><div class="price">₹60,000</div></div>
 </div>
 
+<!-- BABY SHOWER -->
 <h2>Baby Shower</h2>
 <div class="grid gallery">
 <img src="images/baby1.jpg">
