@@ -9,8 +9,10 @@
 
 <style>
 body{margin:0;font-family:Arial;background:#0b0b0b;color:#fff;}
+
 header{
-  background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url("images/wedding1.jpg") center/cover no-repeat;
+  background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+  url("images/wedding1.jpg") center/cover no-repeat;
   text-align:center;
   padding:120px 20px;
 }
@@ -26,14 +28,34 @@ nav a:hover{color:#d4af37;}
 
 section{padding:80px 20px;max-width:1200px;margin:auto;}
 h2{text-align:center;color:#d4af37;margin-bottom:40px;}
+h3{text-align:center;margin:30px 0;}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.gallery img{
+  width:100%;height:220px;object-fit:cover;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,.6);
+}
+
+.package,.card{
+  background:#111;
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+}
+.package h4{color:#d4af37;}
+.price{color:#d4af37;font-size:18px;font-weight:bold;}
 
 .calc{
   background:#111;
   padding:35px;
   border-radius:20px;
-  max-width:700px;
+  max-width:750px;
   margin:0 auto;
 }
 .calc label{
@@ -50,12 +72,30 @@ h2{text-align:center;color:#d4af37;margin-bottom:40px;}
   border-radius:8px;
   border:none;
 }
+
 .total{
   margin-top:25px;
   font-size:28px;
   text-align:center;
   color:#d4af37;
   font-weight:bold;
+}
+
+.contact-box{
+  background:#111;
+  padding:30px;
+  border-radius:18px;
+  text-align:center;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 30px;
+  background:#d4af37;
+  color:#000;
+  border-radius:30px;
+  text-decoration:none;
+  margin-top:15px;
 }
 
 footer{text-align:center;padding:30px;background:#000;color:#777;}
@@ -70,10 +110,76 @@ footer{text-align:center;padding:30px;background:#000;color:#777;}
 </header>
 
 <nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
 <a href="#calculator">Custom Package</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<!-- ================= CUSTOM PACKAGE CALCULATOR ================= -->
+<!-- ABOUT -->
+<section id="about">
+<h2>About Us</h2>
+<p style="text-align:center;max-width:900px;margin:auto;line-height:1.8;color:#ddd;font-size:18px;">
+Saai Wedding Films is a premium cinematic photography brand capturing real emotions
+and timeless memories. Based in Solapur, we specialize in Wedding, Pre-Wedding,
+Engagement and Baby Shower photography with a storytelling approach.
+</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+
+<h2>Wedding Photography</h2>
+<div class="grid gallery">
+<img src="images/wedding1.jpg">
+<img src="images/wedding2.jpg">
+</div>
+<h3>Wedding Packages</h3>
+<div class="grid">
+<div class="package"><h4>Silver</h4><div class="price">₹31,000</div></div>
+<div class="package"><h4>Gold</h4><div class="price">₹43,000</div></div>
+<div class="package"><h4>Platinum</h4><div class="price">₹65,000</div></div>
+</div>
+
+<h2>Pre-Wedding Shoot</h2>
+<div class="grid gallery">
+<img src="images/prewedding1.jpg">
+<img src="images/prewedding2.jpg">
+</div>
+<h3>Pre-Wedding Packages</h3>
+<div class="grid">
+<div class="package"><h4>Silver</h4><div class="price">₹22,000</div></div>
+<div class="package"><h4>Gold</h4><div class="price">₹30,000</div></div>
+<div class="package"><h4>Platinum</h4><div class="price">₹45,000</div></div>
+</div>
+
+<h2>Engagement</h2>
+<div class="grid gallery">
+<img src="images/engagement1.jpg">
+<img src="images/engagement2.jpg">
+</div>
+<h3>Engagement Packages</h3>
+<div class="grid">
+<div class="package"><h4>Silver</h4><div class="price">₹28,000</div></div>
+<div class="package"><h4>Gold</h4><div class="price">₹43,000</div></div>
+<div class="package"><h4>Platinum</h4><div class="price">₹60,000</div></div>
+</div>
+
+<h2>Baby Shower</h2>
+<div class="grid gallery">
+<img src="images/baby1.jpg">
+<img src="images/baby2.jpg">
+</div>
+<h3>Baby Shower Packages</h3>
+<div class="grid">
+<div class="package"><h4>Silver</h4><div class="price">₹15,000</div></div>
+<div class="package"><h4>Gold</h4><div class="price">₹22,000</div></div>
+<div class="package"><h4>Platinum</h4><div class="price">₹30,000</div></div>
+</div>
+
+</section>
+
+<!-- CUSTOM PACKAGE CALCULATOR -->
 <section id="calculator">
 <h2>Custom Package Calculator (Per Day)</h2>
 
@@ -83,79 +189,4 @@ footer{text-align:center;padding:30px;background:#000;color:#777;}
 <span>Traditional Photographer (₹9,000)</span>
 <span>
 <input type="checkbox" data-price="9000" onchange="calcTotal()">
-Days:
-<input type="number" min="1" value="1" onchange="calcTotal()">
-</span>
-</label>
-
-<label>
-<span>Traditional Videographer (₹16,000)</span>
-<span>
-<input type="checkbox" data-price="16000" onchange="calcTotal()">
-Days:
-<input type="number" min="1" value="1" onchange="calcTotal()">
-</span>
-</label>
-
-<label>
-<span>Cinematic Videographer (₹25,000)</span>
-<span>
-<input type="checkbox" data-price="25000" onchange="calcTotal()">
-Days:
-<input type="number" min="1" value="1" onchange="calcTotal()">
-</span>
-</label>
-
-<label>
-<span>Candid Photographer (₹16,000)</span>
-<span>
-<input type="checkbox" data-price="16000" onchange="calcTotal()">
-Days:
-<input type="number" min="1" value="1" onchange="calcTotal()">
-</span>
-</label>
-
-<div class="total">
-Total : ₹<span id="total">0</span>
-</div>
-
-<p style="text-align:center;color:#aaa;margin-top:10px;font-size:14px;">
-* For multiple days, per-day price is calculated at half rate
-</p>
-
-</div>
-</section>
-
-<footer>
-© 2026 Saai Wedding Films | Solapur
-</footer>
-
-<script>
-function calcTotal(){
-  let total = 0;
-
-  document.querySelectorAll('.calc label').forEach(row=>{
-    const checkbox = row.querySelector('input[type="checkbox"]');
-    const daysInput = row.querySelector('input[type="number"]');
-
-    if(checkbox.checked){
-      const basePrice = parseInt(checkbox.dataset.price);
-      const days = parseInt(daysInput.value) || 1;
-
-      let price;
-      if(days === 1){
-        price = basePrice;
-      }else{
-        price = (basePrice / 2) * days;
-      }
-
-      total += price;
-    }
-  });
-
-  document.getElementById("total").innerText = total;
-}
-</script>
-
-</body>
-</html>
+Days <input type="number" min="1" value="1" onchange="c
