@@ -229,8 +229,6 @@ real emotions and timeless stories. Based in Solapur, serving Pune, Mumbai & Pan
 </div>
 </section>
 
-<footer>© 2026 Saai Wedding Film's</footer>
-
 <script>
 const PRICES={
   wedding:{bronze:23000,silver:31000,gold:43000},
@@ -262,3 +260,5 @@ btn.classList.add('active');
 
 </body>
 </html>
+
+<footer>© 2026 Saai Wedding Film's</footer>
