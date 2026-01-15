@@ -37,14 +37,12 @@ h3{text-align:center;margin:30px 0;}
 }
 
 .gallery img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
+  width:100%;height:220px;object-fit:cover;
   border-radius:16px;
   box-shadow:0 10px 25px rgba(0,0,0,.6);
 }
 
-.package{
+.package,.card{
   background:#111;
   padding:25px;
   border-radius:18px;
@@ -57,10 +55,10 @@ h3{text-align:center;margin:30px 0;}
   background:#111;
   padding:35px;
   border-radius:20px;
-  max-width:800px;
+  max-width:750px;
   margin:0 auto;
 }
-.calc .row{
+.calc label{
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -77,7 +75,7 @@ h3{text-align:center;margin:30px 0;}
 
 .total{
   margin-top:25px;
-  font-size:30px;
+  font-size:28px;
   text-align:center;
   color:#d4af37;
   font-weight:bold;
@@ -112,12 +110,21 @@ footer{text-align:center;padding:30px;background:#000;color:#777;}
 </header>
 
 <nav>
+<a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#calculator">Custom Package</a>
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- SERVICES -->
+<section id="about">
+<h2>About Us</h2>
+<p style="text-align:center;max-width:900px;margin:auto;line-height:1.8;color:#ddd;font-size:18px;">
+Saai Wedding Films is a premium cinematic photography brand capturing real emotions
+and timeless memories. Based in Solapur, we specialize in Wedding, Pre-Wedding,
+Engagement and Baby Shower photography with a storytelling approach.
+</p>
+</section>
+
 <section id="services">
 
 <h2>Wedding Photography</h2>
@@ -125,7 +132,6 @@ footer{text-align:center;padding:30px;background:#000;color:#777;}
 <img src="images/wedding1.jpg">
 <img src="images/wedding2.jpg">
 </div>
-
 <h3>Wedding Packages</h3>
 <div class="grid">
 <div class="package"><h4>Silver</h4><div class="price">₹31,000</div></div>
@@ -133,58 +139,92 @@ footer{text-align:center;padding:30px;background:#000;color:#777;}
 <div class="package"><h4>Platinum</h4><div class="price">₹65,000</div></div>
 </div>
 
+<h2>Pre-Wedding Shoot</h2>
+<div class="grid gallery">
+<img src="images/prewedding1.jpg">
+<img src="images/prewedding2.jpg">
+</div>
+<h3>Pre-Wedding Packages</h3>
+<div class="grid">
+<div class="package"><h4>Silver</h4><div class="price">₹22,000</div></div>
+<div class="package"><h4>Gold</h4><div class="price">₹30,000</div></div>
+<div class="package"><h4>Platinum</h4><div class="price">₹45,000</div></div>
+</div>
+
+<h2>Engagement</h2>
+<div class="grid gallery">
+<img src="images/engagement1.jpg">
+<img src="images/engagement2.jpg">
+</div>
+<h3>Engagement Packages</h3>
+<div class="grid">
+<div class="package"><h4>Silver</h4><div class="price">₹28,000</div></div>
+<div class="package"><h4>Gold</h4><div class="price">₹43,000</div></div>
+<div class="package"><h4>Platinum</h4><div class="price">₹60,000</div></div>
+</div>
+
+<h2>Baby Shower</h2>
+<div class="grid gallery">
+<img src="images/baby1.jpg">
+<img src="images/baby2.jpg">
+</div>
+<h3>Baby Shower Packages</h3>
+<div class="grid">
+<div class="package"><h4>Silver</h4><div class="price">₹15,000</div></div>
+<div class="package"><h4>Gold</h4><div class="price">₹22,000</div></div>
+<div class="package"><h4>Platinum</h4><div class="price">₹30,000</div></div>
+</div>
+
 </section>
 
-<!-- ================= CUSTOM PACKAGE CALCULATOR ================= -->
 <section id="calculator">
 <h2>Custom Package Calculator (Per Day)</h2>
 
 <div class="calc">
 
-<div class="row">
+<label>
 <span>Traditional Photographer (₹9,000)</span>
 <span>
 <input type="checkbox" data-price="9000" onchange="calcTotal()">
 Days <input type="number" min="1" value="1" onchange="calcTotal()">
 </span>
-</div>
+</label>
 
-<div class="row">
+<label>
 <span>Traditional Videographer (₹16,000)</span>
 <span>
 <input type="checkbox" data-price="16000" onchange="calcTotal()">
 Days <input type="number" min="1" value="1" onchange="calcTotal()">
 </span>
-</div>
+</label>
 
-<div class="row">
-<span>Candid Photographer (₹16,000)</span>
-<span>
-<input type="checkbox" data-price="16000" onchange="calcTotal()">
-Days <input type="number" min="1" value="1" onchange="calcTotal()">
-</span>
-</div>
-
-<div class="row">
+<label>
 <span>Cinematic Videographer (₹25,000)</span>
 <span>
 <input type="checkbox" data-price="25000" onchange="calcTotal()">
 Days <input type="number" min="1" value="1" onchange="calcTotal()">
 </span>
-</div>
+</label>
+
+<label>
+<span>Candid Photographer (₹16,000)</span>
+<span>
+<input type="checkbox" data-price="16000" onchange="calcTotal()">
+Days <input type="number" min="1" value="1" onchange="calcTotal()">
+</span>
+</label>
 
 <div class="total">
 Total : ₹<span id="total">0</span>
 </div>
 
 <p style="text-align:center;color:#aaa;font-size:14px;">
-* Per day price = base price / 2
+* For multiple days, per-day price is calculated at half rate
 </p>
 
 </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
 <h2>Contact Us</h2>
 <div class="grid">
@@ -211,7 +251,7 @@ Instagram
 function calcTotal(){
   let total = 0;
 
-  document.querySelectorAll('.calc .row').forEach(row=>{
+  document.querySelectorAll('.calc label').forEach(row=>{
     const checkbox = row.querySelector('input[type="checkbox"]');
     const daysInput = row.querySelector('input[type="number"]');
 
@@ -219,8 +259,11 @@ function calcTotal(){
       const basePrice = parseInt(checkbox.dataset.price);
       const days = parseInt(daysInput.value) || 1;
 
-      const perDay = basePrice / 2;
-      total += perDay * days;
+      let price = (days === 1)
+        ? basePrice
+        : (basePrice / 2) * days;
+
+      total += price;
     }
   });
 
