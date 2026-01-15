@@ -26,31 +26,39 @@ nav a:hover{color:#d4af37;}
 
 section{padding:80px 20px;max-width:1200px;margin:auto;}
 h2{text-align:center;color:#d4af37;margin-bottom:40px;}
-h3{text-align:center;margin:30px 0;}
 
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
-.gallery img{
-  width:100%;height:220px;object-fit:cover;
-  border-radius:16px;
-  box-shadow:0 10px 25px rgba(0,0,0,.6);
-}
 
-.package{
-  background:#111;padding:25px;border-radius:18px;text-align:center;
+.calc{
+  background:#111;
+  padding:35px;
+  border-radius:20px;
+  max-width:700px;
+  margin:0 auto;
 }
-.package h4{color:#d4af37;}
-.price{color:#d4af37;font-size:18px;font-weight:bold;}
-
-.contact-box{
-  background:#111;padding:30px;border-radius:18px;
+.calc label{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 0;
+  font-size:18px;
+}
+.calc input[type="checkbox"]{transform:scale(1.2);}
+.calc input[type="number"]{
+  width:70px;
+  padding:6px;
+  border-radius:8px;
+  border:none;
+}
+.total{
+  margin-top:25px;
+  font-size:28px;
+  text-align:center;
+  color:#d4af37;
+  font-weight:bold;
 }
 
 footer{text-align:center;padding:30px;background:#000;color:#777;}
-.btn{
-  display:inline-block;padding:12px 30px;
-  background:#d4af37;color:#000;border-radius:30px;
-  text-decoration:none;margin-top:15px;
-}
 </style>
 </head>
 
@@ -62,104 +70,92 @@ footer{text-align:center;padding:30px;background:#000;color:#777;}
 </header>
 
 <nav>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
+<a href="#calculator">Custom Package</a>
 </nav>
 
-<!-- ABOUT -->
-<section id="about">
-<h2>About Us</h2>
-<p style="text-align:center;max-width:900px;margin:auto;line-height:1.8;color:#ddd;font-size:18px;">
-Saai Wedding Films is a cinematic photography brand dedicated to capturing
-real emotions, timeless memories, and beautiful stories. Based in Solapur,
-we specialize in premium wedding, pre-wedding, engagement and baby shower photography
-with a creative storytelling approach.
+<!-- ================= CUSTOM PACKAGE CALCULATOR ================= -->
+<section id="calculator">
+<h2>Custom Package Calculator (Per Day)</h2>
+
+<div class="calc">
+
+<label>
+<span>Traditional Photographer (₹9,000)</span>
+<span>
+<input type="checkbox" data-price="9000" onchange="calcTotal()">
+Days:
+<input type="number" min="1" value="1" onchange="calcTotal()">
+</span>
+</label>
+
+<label>
+<span>Traditional Videographer (₹16,000)</span>
+<span>
+<input type="checkbox" data-price="16000" onchange="calcTotal()">
+Days:
+<input type="number" min="1" value="1" onchange="calcTotal()">
+</span>
+</label>
+
+<label>
+<span>Cinematic Videographer (₹25,000)</span>
+<span>
+<input type="checkbox" data-price="25000" onchange="calcTotal()">
+Days:
+<input type="number" min="1" value="1" onchange="calcTotal()">
+</span>
+</label>
+
+<label>
+<span>Candid Photographer (₹16,000)</span>
+<span>
+<input type="checkbox" data-price="16000" onchange="calcTotal()">
+Days:
+<input type="number" min="1" value="1" onchange="calcTotal()">
+</span>
+</label>
+
+<div class="total">
+Total : ₹<span id="total">0</span>
+</div>
+
+<p style="text-align:center;color:#aaa;margin-top:10px;font-size:14px;">
+* For multiple days, per-day price is calculated at half rate
 </p>
-</section>
 
-<!-- SERVICES -->
-<section id="services">
-
-<!-- WEDDING -->
-<h2>Wedding Photography</h2>
-<div class="grid gallery">
-<img src="images/wedding1.jpg">
-<img src="images/wedding2.jpg">
-</div>
-
-<h3>Wedding Packages</h3>
-<div class="grid">
-<div class="package"><h4>Silver</h4><div class="price">₹31,000</div></div>
-<div class="package"><h4>Gold</h4><div class="price">₹43,000</div></div>
-<div class="package"><h4>Platinum</h4><div class="price">₹65,000</div></div>
-</div>
-
-<!-- PRE-WEDDING -->
-<h2>Pre-Wedding Shoot</h2>
-<div class="grid gallery">
-<img src="images/prewedding1.jpg">
-<img src="images/prewedding2.jpg">
-</div>
-
-<h3>Pre-Wedding Packages</h3>
-<div class="grid">
-<div class="package"><h4>Silver</h4><div class="price">₹22,000</div></div>
-<div class="package"><h4>Gold</h4><div class="price">₹30,000</div></div>
-<div class="package"><h4>Platinum</h4><div class="price">₹45,000</div></div>
-</div>
-
-<!-- ENGAGEMENT -->
-<h2>Engagement</h2>
-<div class="grid gallery">
-<img src="images/engagement.jpg">
-<img src="images/engagement2.jpg">
-</div>
-
-<h3>Engagement Packages</h3>
-<div class="grid">
-<div class="package"><h4>Silver</h4><div class="price">₹28,000</div></div>
-<div class="package"><h4>Gold</h4><div class="price">₹43,000</div></div>
-<div class="package"><h4>Platinum</h4><div class="price">₹60,000</div></div>
-</div>
-
-<!-- BABY SHOWER -->
-<h2>Baby Shower</h2>
-<div class="grid gallery">
-<img src="images/baby1.jpg">
-<img src="images/baby2.jpg">
-</div>
-
-<h3>Baby Shower Packages</h3>
-<div class="grid">
-<div class="package"><h4>Silver</h4><div class="price">₹15,000</div></div>
-<div class="package"><h4>Gold</h4><div class="price">₹22,000</div></div>
-<div class="package"><h4>Platinum</h4><div class="price">₹30,000</div></div>
-</div>
-
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-<h2>Contact Us</h2>
-<div class="grid">
-<div class="contact-box">
-<p>📞 Mobile / WhatsApp: <b>8698029935</b></p>
-<p>📍 City: Solapur</p>
-<a class="btn" href="https://wa.me/918698029935" target="_blank">WhatsApp Now</a>
-</div>
-<div class="contact-box">
-<p>📸 Follow us on Instagram</p>
-<a class="btn" href="https://www.instagram.com/_saai_clicks?igsh=MWh2eTlmemNhcWR3dA==" target="_blank">
-Instagram
-</a>
-</div>
 </div>
 </section>
 
 <footer>
 © 2026 Saai Wedding Films | Solapur
 </footer>
+
+<script>
+function calcTotal(){
+  let total = 0;
+
+  document.querySelectorAll('.calc label').forEach(row=>{
+    const checkbox = row.querySelector('input[type="checkbox"]');
+    const daysInput = row.querySelector('input[type="number"]');
+
+    if(checkbox.checked){
+      const basePrice = parseInt(checkbox.dataset.price);
+      const days = parseInt(daysInput.value) || 1;
+
+      let price;
+      if(days === 1){
+        price = basePrice;
+      }else{
+        price = (basePrice / 2) * days;
+      }
+
+      total += price;
+    }
+  });
+
+  document.getElementById("total").innerText = total;
+}
+</script>
 
 </body>
 </html>
