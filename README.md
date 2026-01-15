@@ -12,7 +12,7 @@ body{margin:0;font-family:Arial;background:#0b0b0b;color:#fff;}
 
 header{
   background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-  url("images/wedding1.jpg") center/cover no-repeat;
+  url("images/camera1.jpg") center/cover no-repeat;
   text-align:center;
   padding:120px 20px;
 }
